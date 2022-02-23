@@ -20,30 +20,33 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="遇到困难睡大觉">
-<meta property="og:type" content="website">
-<meta property="og:title" content="摸鱼">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="1.1 基本概念关于现代OS的四种观点 作为用户与计算机硬件系统之间的接口 是建立在计算机硬件平台上的虚拟机器（计算机资源的抽象） 作为计算机系统资源的管理者 是计算机系统工作流程的组织者  1.2 OS的系统需求OS的功能性需求 计算机用户需要的用户命令（用户接口） 应用软件需要的系统调用（程序接口，即API）  OS的非功能性需求 性能：吞吐量、响应时间、用户数…… 公平性：如对某些应用是否有">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统引论">
+<meta property="og:url" content="http://example.com/2022/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/index.html">
 <meta property="og:site_name" content="摸鱼">
-<meta property="og:description" content="遇到困难睡大觉">
+<meta property="og:description" content="1.1 基本概念关于现代OS的四种观点 作为用户与计算机硬件系统之间的接口 是建立在计算机硬件平台上的虚拟机器（计算机资源的抽象） 作为计算机系统资源的管理者 是计算机系统工作流程的组织者  1.2 OS的系统需求OS的功能性需求 计算机用户需要的用户命令（用户接口） 应用软件需要的系统调用（程序接口，即API）  OS的非功能性需求 性能：吞吐量、响应时间、用户数…… 公平性：如对某些应用是否有">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-02-23T12:10:41.000Z">
+<meta property="article:modified_time" content="2022-02-23T14:06:47.002Z">
 <meta property="article:author" content="JAYZ">
+<meta property="article:tag" content="操作系统">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2022/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>摸鱼</title>
+  <title>操作系统引论 | 摸鱼</title>
   
 
 
@@ -151,9 +154,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -169,10 +173,9 @@
       <meta itemprop="name" content="摸鱼">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/" class="post-title-link" itemprop="url">操作系统引论</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          操作系统引论
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -186,6 +189,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -196,7 +206,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h2><h4 id="关于现代OS的四种观点"><a href="#关于现代OS的四种观点" class="headerlink" title="关于现代OS的四种观点"></a>关于现代OS的四种观点</h4><ul>
+        <h2 id="1-1-基本概念"><a href="#1-1-基本概念" class="headerlink" title="1.1 基本概念"></a>1.1 基本概念</h2><h4 id="关于现代OS的四种观点"><a href="#关于现代OS的四种观点" class="headerlink" title="关于现代OS的四种观点"></a>关于现代OS的四种观点</h4><ul>
 <li>作为用户与计算机硬件系统之间的<strong>接口</strong></li>
 <li>是建立在计算机硬件平台上的虚拟机器（计算机资源的<strong>抽象</strong>）</li>
 <li>作为计算机系统资源的<strong>管理者</strong></li>
@@ -273,309 +283,33 @@
 <li><strong>微核结构</strong>：尽量减少核心子系统的大小</li>
 </ul>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="tag"># 操作系统</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JAYZ">
-      <meta itemprop="description" content="遇到困难睡大觉">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="摸鱼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">数据库系统基础</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-23 11:37:40 / 修改时间：20:00:56" itemprop="dateCreated datePublished" datetime="2022-02-23T11:37:40+08:00">2022-02-23</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="1-1-数据库及其系统的概念"><a href="#1-1-数据库及其系统的概念" class="headerlink" title="1.1 数据库及其系统的概念"></a>1.1 数据库及其系统的概念</h2><h4 id="1-1-1-数据库的定义"><a href="#1-1-1-数据库的定义" class="headerlink" title="1.1.1 数据库的定义"></a>1.1.1 数据库的定义</h4><ul>
-<li><strong>定义</strong>：依照特定数据模型组织、存储和管理数据的文件集合</li>
-<li>数据库文件<strong>特点</strong>：<ul>
-<li>数据一般不重复存放</li>
-<li>可支持多个应用程序并发访问</li>
-<li>数据结构独立于使用它的应用程序</li>
-<li>增删查改操作均由数据库系统软件进行管理和控制</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-1-2-数据模型"><a href="#1-1-2-数据模型" class="headerlink" title="1.1.2 数据模型"></a>1.1.2 数据模型</h4><ul>
-<li><p><strong>定义</strong>：一种描述事物对象<strong>数据特征</strong>及其<strong>结构</strong>的形式化表示</p>
-</li>
-<li><p><strong>组成</strong>：</p>
-<ul>
-<li><strong>数据结构</strong>：描述事物对象的<strong>静态特征</strong>，包括事物对象的属性数据、数据类型、数据组织方式等</li>
-<li><strong>数据操作</strong>：描述事物对象的<strong>动态特征</strong>，如增删查改等</li>
-<li><strong>数据约束</strong>：描述事物对象的数据之间语义的<strong>联系</strong>，以及数据取值范围等<strong>规则</strong>，确保数据的完整性、一致性和有效性</li>
-</ul>
-</li>
-<li><p>数据库前后使用的<strong>数据模型</strong>（根本区别在于数据之间的<strong>联系方式不同</strong>）</p>
-<ul>
-<li><p><strong>层次数据模型</strong>：（<strong>树结构</strong>）</p>
-</li>
-<li><p><strong>网状数据模型</strong>：（<strong>图结构</strong>）</p>
-</li>
-<li><p><strong>关系数据模型</strong>：（<strong>关系二维表</strong>——表之间通过具有<strong>相同列属性的数据值</strong>进行约束关联）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="1-1-3-数据库系统的组成"><a href="#1-1-3-数据库系统的组成" class="headerlink" title="1.1.3 数据库系统的组成"></a>1.1.3 数据库系统的组成</h4><ul>
-<li><p><strong>用户</strong>：分为<strong>最终用户</strong>和<strong>DBA用户</strong></p>
-</li>
-<li><p><strong>数据库应用程序</strong>：使用DBMS提供的标准接口</p>
-</li>
-<li><p><strong>数据库管理系统</strong>：属于系统软件</p>
-</li>
-<li><p><strong>数据库</strong>：存放系统各类数据</p>
-<p>以<strong>关系数据库</strong>为例：用户数据存放在用户表，<strong>元数据</strong>、索引数据、运行数据等存放在系统表</p>
-</li>
-</ul>
-<hr>
-<h2 id="1-2-数据库技术的发展"><a href="#1-2-数据库技术的发展" class="headerlink" title="1.2 数据库技术的发展"></a>1.2 数据库技术的发展</h2><hr>
-<h2 id="1-3-数据库应用系统"><a href="#1-3-数据库应用系统" class="headerlink" title="1.3 数据库应用系统"></a>1.3 数据库应用系统</h2><hr>
-<h2 id="1-4-典型的数据库管理系统"><a href="#1-4-典型的数据库管理系统" class="headerlink" title="1.4 典型的数据库管理系统"></a>1.4 典型的数据库管理系统</h2><hr>
-<h2 id="1-5-软件下载"><a href="#1-5-软件下载" class="headerlink" title="1.5 软件下载"></a>1.5 软件下载</h2>
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2022/02/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/" rel="prev" title="数据库系统基础">
+      <i class="fa fa-chevron-left"></i> 数据库系统基础
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/20/git%E7%9A%84%E4%BE%BF%E6%90%BA%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94gitkraken/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JAYZ">
-      <meta itemprop="description" content="遇到困难睡大觉">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="摸鱼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/20/git%E7%9A%84%E4%BE%BF%E6%90%BA%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94gitkraken/" class="post-title-link" itemprop="url">git的便携工具——gitkraken</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-20 18:23:21 / 修改时间：18:31:14" itemprop="dateCreated datePublished" datetime="2022-02-20T18:23:21+08:00">2022-02-20</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>版本</strong>：6.5.1（之后的会收费）</p>
-<p><strong>资源</strong>：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1TQy-MkjvcOZUfEQBhzxqLA">百度云盘</a> 提取码：1234</p>
-<p><strong>教程</strong>：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1bK4y1t7CD?spm_id_from=333.1007.top_right_bar_window_history.content.click">b站视频</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/20/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JAYZ">
-      <meta itemprop="description" content="遇到困难睡大觉">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="摸鱼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/20/%E5%85%B3%E4%BA%8E%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/" class="post-title-link" itemprop="url">关于科学上网</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-20 18:18:22 / 修改时间：18:32:21" itemprop="dateCreated datePublished" datetime="2022-02-20T18:18:22+08:00">2022-02-20</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>经典的佛跳墙（速度慢，免费）<a target="_blank" rel="noopener" href="https://www.jiayouyashanghai.com/">现名为“极光”</a></p>
-</li>
-<li><p>比较实惠，vip节点5RMB，特惠首年75RMB，<a target="_blank" rel="noopener" href="https://sockboom.site/auth/register?affid=383982">注册链接</a></p>
-</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/20/theFirstOne/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="JAYZ">
-      <meta itemprop="description" content="遇到困难睡大觉">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="摸鱼">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/02/20/theFirstOne/" class="post-title-link" itemprop="url">theFirstOne</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-02-20 17:05:56 / 修改时间：17:29:39" itemprop="dateCreated datePublished" datetime="2022-02-20T17:05:56+08:00">2022-02-20</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这是第一篇blog</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -628,6 +362,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">1.1 基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E7%8E%B0%E4%BB%A3OS%E7%9A%84%E5%9B%9B%E7%A7%8D%E8%A7%82%E7%82%B9"><span class="nav-number">1.0.1.</span> <span class="nav-text">关于现代OS的四种观点</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-OS%E7%9A%84%E7%B3%BB%E7%BB%9F%E9%9C%80%E6%B1%82"><span class="nav-number">2.</span> <span class="nav-text">1.2 OS的系统需求</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#OS%E7%9A%84%E5%8A%9F%E8%83%BD%E6%80%A7%E9%9C%80%E6%B1%82"><span class="nav-number">2.0.1.</span> <span class="nav-text">OS的功能性需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OS%E7%9A%84%E9%9D%9E%E5%8A%9F%E8%83%BD%E6%80%A7%E9%9C%80%E6%B1%82"><span class="nav-number">2.0.2.</span> <span class="nav-text">OS的非功能性需求</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#OS%E5%AF%B9%E7%A1%AC%E4%BB%B6%E5%B9%B3%E5%8F%B0%E7%9A%84%E4%BE%9D%E8%B5%96"><span class="nav-number">2.0.3.</span> <span class="nav-text">OS对硬件平台的依赖</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%87%8D%E8%A6%81%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">2.0.4.</span> <span class="nav-text">重要的基本概念</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-OS%E7%9A%84%E6%BC%94%E5%8F%98%E3%80%81%E7%B1%BB%E5%9E%8B%E5%8F%8A%E7%89%B9%E5%BE%81"><span class="nav-number">3.</span> <span class="nav-text">1.3 OS的演变、类型及特征</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E9%81%93%E6%89%B9%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.0.1.</span> <span class="nav-text">单道批处理系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%9A%E9%81%93%E6%89%B9%E5%A4%84%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.0.2.</span> <span class="nav-text">多道批处理系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E6%97%B6%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.0.3.</span> <span class="nav-text">分时系统</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E7%8E%B0%E4%BB%A3OS%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="nav-number">4.</span> <span class="nav-text">1.4 现代OS的基本类型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E6%9C%BAOS"><span class="nav-number">4.0.1.</span> <span class="nav-text">单机OS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%8E%B0%E4%BB%A3OS%E7%9A%84%E4%B8%A4%E4%B8%AA%E5%9F%BA%E6%9C%AC%E7%89%B9%E5%BE%81"><span class="nav-number">4.0.2.</span> <span class="nav-text">现代OS的两个基本特征</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-OS%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">5.</span> <span class="nav-text">1.5 OS的体系结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E7%9A%84OS%E6%80%BB%E4%BD%93%E7%BB%93%E6%9E%84%E9%A3%8E%E6%A0%BC"><span class="nav-number">5.0.1.</span> <span class="nav-text">常见的OS总体结构风格</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%B9%B3%E5%8F%B0%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84"><span class="nav-number">5.0.2.</span> <span class="nav-text">基础平台子系统结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%B9%B3%E5%8F%B0%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%EF%BC%88%E4%BA%8C%EF%BC%89"><span class="nav-number">5.0.3.</span> <span class="nav-text">基础平台子系统结构（二）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E5%B9%B3%E5%8F%B0%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%BB%93%E6%9E%84%EF%BC%88%E4%B8%89%EF%BC%89"><span class="nav-number">5.0.4.</span> <span class="nav-text">基础平台子系统结构（三）</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
