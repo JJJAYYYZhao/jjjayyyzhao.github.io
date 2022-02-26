@@ -20,20 +20,20 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="1.1 数据库及其系统的概念1.1.1 数据库的定义 定义：依照特定数据模型组织、存储和管理数据的文件集合 数据库文件特点： 数据一般不重复存放 可支持多个应用程序并发访问 数据结构独立于使用它的应用程序 增删查改操作均由数据库系统软件进行管理和控制    1.1.2 数据模型 定义：一种描述事物对象数据特征及其结构的形式化表示  组成：  数据结构：描述事物对象的静态特征，包括事物对象的属性数据">
+  <meta name="description" content="2.1 关系及其相关概念2.1.1 关系的通俗定义 关系 - 存储实体数据的二维表  2.1.2 关系的数学定义 域 - 即实体属性 元组 - 实体的一个实例数据 基数 - 域基数的乘积   2.1.3 关系键的定义 键、复合键、候选键、主键、代理键  2.1.4 关系模式表示 关系名（主键属性，属性2，…，属性n）  2.2 数据库原理2.2.1 关系模型的组成2.2.2 关系模型的操作 传统：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数据库系统基础">
-<meta property="og:url" content="http://example.com/2022/02/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:title" content="数据库关系模型">
+<meta property="og:url" content="http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="摸鱼">
-<meta property="og:description" content="1.1 数据库及其系统的概念1.1.1 数据库的定义 定义：依照特定数据模型组织、存储和管理数据的文件集合 数据库文件特点： 数据一般不重复存放 可支持多个应用程序并发访问 数据结构独立于使用它的应用程序 增删查改操作均由数据库系统软件进行管理和控制    1.1.2 数据模型 定义：一种描述事物对象数据特征及其结构的形式化表示  组成：  数据结构：描述事物对象的静态特征，包括事物对象的属性数据">
+<meta property="og:description" content="2.1 关系及其相关概念2.1.1 关系的通俗定义 关系 - 存储实体数据的二维表  2.1.2 关系的数学定义 域 - 即实体属性 元组 - 实体的一个实例数据 基数 - 域基数的乘积   2.1.3 关系键的定义 键、复合键、候选键、主键、代理键  2.1.4 关系模式表示 关系名（主键属性，属性2，…，属性n）  2.2 数据库原理2.2.1 关系模型的组成2.2.2 关系模型的操作 传统：">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-02-23T03:37:40.000Z">
-<meta property="article:modified_time" content="2022-02-23T12:00:56.228Z">
+<meta property="article:published_time" content="2022-02-24T03:17:06.000Z">
+<meta property="article:modified_time" content="2022-02-24T04:15:06.593Z">
 <meta property="article:author" content="JAYZ">
 <meta property="article:tag" content="数据库">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2022/02/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/">
+<link rel="canonical" href="http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B/">
 
 
 <script id="page-configurations">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title>数据库系统基础 | 摸鱼</title>
+  <title>数据库关系模型 | 摸鱼</title>
   
 
 
@@ -161,7 +161,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E5%9F%BA%E7%A1%80/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -174,7 +174,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          数据库系统基础
+          数据库关系模型
         </h1>
 
         <div class="post-meta">
@@ -185,7 +185,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2022-02-23 11:37:40 / 修改时间：20:00:56" itemprop="dateCreated datePublished" datetime="2022-02-23T11:37:40+08:00">2022-02-23</time>
+              <time title="创建时间：2022-02-24 11:17:06 / 修改时间：12:15:06" itemprop="dateCreated datePublished" datetime="2022-02-24T11:17:06+08:00">2022-02-24</time>
             </span>
 
           
@@ -206,53 +206,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="1-1-数据库及其系统的概念"><a href="#1-1-数据库及其系统的概念" class="headerlink" title="1.1 数据库及其系统的概念"></a>1.1 数据库及其系统的概念</h2><h4 id="1-1-1-数据库的定义"><a href="#1-1-1-数据库的定义" class="headerlink" title="1.1.1 数据库的定义"></a>1.1.1 数据库的定义</h4><ul>
-<li><strong>定义</strong>：依照特定数据模型组织、存储和管理数据的文件集合</li>
-<li>数据库文件<strong>特点</strong>：<ul>
-<li>数据一般不重复存放</li>
-<li>可支持多个应用程序并发访问</li>
-<li>数据结构独立于使用它的应用程序</li>
-<li>增删查改操作均由数据库系统软件进行管理和控制</li>
+        <h2 id="2-1-关系及其相关概念"><a href="#2-1-关系及其相关概念" class="headerlink" title="2.1 关系及其相关概念"></a>2.1 关系及其相关概念</h2><h4 id="2-1-1-关系的通俗定义"><a href="#2-1-1-关系的通俗定义" class="headerlink" title="2.1.1 关系的通俗定义"></a>2.1.1 关系的通俗定义</h4><ul>
+<li><strong>关系</strong> - 存储<strong>实体数据</strong>的二维表</li>
 </ul>
-</li>
-</ul>
-<h4 id="1-1-2-数据模型"><a href="#1-1-2-数据模型" class="headerlink" title="1.1.2 数据模型"></a>1.1.2 数据模型</h4><ul>
-<li><p><strong>定义</strong>：一种描述事物对象<strong>数据特征</strong>及其<strong>结构</strong>的形式化表示</p>
-</li>
-<li><p><strong>组成</strong>：</p>
-<ul>
-<li><strong>数据结构</strong>：描述事物对象的<strong>静态特征</strong>，包括事物对象的属性数据、数据类型、数据组织方式等</li>
-<li><strong>数据操作</strong>：描述事物对象的<strong>动态特征</strong>，如增删查改等</li>
-<li><strong>数据约束</strong>：描述事物对象的数据之间语义的<strong>联系</strong>，以及数据取值范围等<strong>规则</strong>，确保数据的完整性、一致性和有效性</li>
-</ul>
-</li>
-<li><p>数据库前后使用的<strong>数据模型</strong>（根本区别在于数据之间的<strong>联系方式不同</strong>）</p>
-<ul>
-<li><p><strong>层次数据模型</strong>：（<strong>树结构</strong>）</p>
-</li>
-<li><p><strong>网状数据模型</strong>：（<strong>图结构</strong>）</p>
-</li>
-<li><p><strong>关系数据模型</strong>：（<strong>关系二维表</strong>——表之间通过具有<strong>相同列属性的数据值</strong>进行约束关联）</p>
+<h4 id="2-1-2-关系的数学定义"><a href="#2-1-2-关系的数学定义" class="headerlink" title="2.1.2 关系的数学定义"></a>2.1.2 关系的数学定义</h4><ul>
+<li><p><strong>域</strong> - 即实体属性</p>
+<p><strong>元组</strong> - 实体的一个实例数据</p>
+<p><strong>基数</strong> - 域基数的乘积</p>
 </li>
 </ul>
-</li>
+<h4 id="2-1-3-关系键的定义"><a href="#2-1-3-关系键的定义" class="headerlink" title="2.1.3 关系键的定义"></a>2.1.3 关系键的定义</h4><ul>
+<li><strong>键</strong>、<strong>复合键</strong>、<strong>候选键</strong>、<strong>主键</strong>、<strong>代理键</strong></li>
 </ul>
-<h4 id="1-1-3-数据库系统的组成"><a href="#1-1-3-数据库系统的组成" class="headerlink" title="1.1.3 数据库系统的组成"></a>1.1.3 数据库系统的组成</h4><ul>
-<li><p><strong>用户</strong>：分为<strong>最终用户</strong>和<strong>DBA用户</strong></p>
-</li>
-<li><p><strong>数据库应用程序</strong>：使用DBMS提供的标准接口</p>
-</li>
-<li><p><strong>数据库管理系统</strong>：属于系统软件</p>
-</li>
-<li><p><strong>数据库</strong>：存放系统各类数据</p>
-<p>以<strong>关系数据库</strong>为例：用户数据存放在用户表，<strong>元数据</strong>、索引数据、运行数据等存放在系统表</p>
-</li>
+<h4 id="2-1-4-关系模式表示"><a href="#2-1-4-关系模式表示" class="headerlink" title="2.1.4 关系模式表示"></a>2.1.4 关系模式表示</h4><ul>
+<li>关系名（<u>主键属性</u>，属性2，…，属性n）</li>
 </ul>
-<hr>
-<h2 id="1-2-数据库技术的发展"><a href="#1-2-数据库技术的发展" class="headerlink" title="1.2 数据库技术的发展"></a>1.2 数据库技术的发展</h2><hr>
-<h2 id="1-3-数据库应用系统"><a href="#1-3-数据库应用系统" class="headerlink" title="1.3 数据库应用系统"></a>1.3 数据库应用系统</h2><hr>
-<h2 id="1-4-典型的数据库管理系统"><a href="#1-4-典型的数据库管理系统" class="headerlink" title="1.4 典型的数据库管理系统"></a>1.4 典型的数据库管理系统</h2><hr>
-<h2 id="1-5-软件下载"><a href="#1-5-软件下载" class="headerlink" title="1.5 软件下载"></a>1.5 软件下载</h2>
+<h2 id="2-2-数据库原理"><a href="#2-2-数据库原理" class="headerlink" title="2.2 数据库原理"></a>2.2 数据库原理</h2><h4 id="2-2-1-关系模型的组成"><a href="#2-2-1-关系模型的组成" class="headerlink" title="2.2.1 关系模型的组成"></a>2.2.1 关系模型的组成</h4><h4 id="2-2-2-关系模型的操作"><a href="#2-2-2-关系模型的操作" class="headerlink" title="2.2.2 关系模型的操作"></a>2.2.2 关系模型的操作</h4><ul>
+<li>传统：并、差、交、笛卡尔积</li>
+<li>专门：选择、投影、连接（θ连接、自然连接、外连接）、除运算</li>
+</ul>
+<h4 id="2-2-3-数据完整性约束"><a href="#2-2-3-数据完整性约束" class="headerlink" title="2.2.3 数据完整性约束"></a>2.2.3 数据完整性约束</h4><ul>
+<li><strong>实体完整性</strong> - 主键唯一且不为空</li>
+<li><strong>参照完整性</strong> - 主键与外键相匹配</li>
+<li><strong>用户自定义完整性</strong></li>
+</ul>
+<h2 id="2-3-PostgreSQL数据库关系操作实践"><a href="#2-3-PostgreSQL数据库关系操作实践" class="headerlink" title="2.3 PostgreSQL数据库关系操作实践"></a>2.3 PostgreSQL数据库关系操作实践</h2>
     </div>
 
     
@@ -270,13 +248,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2022/02/20/git%E7%9A%84%E4%BE%BF%E6%90%BA%E5%B7%A5%E5%85%B7%E2%80%94%E2%80%94gitkraken/" rel="prev" title="git的便携工具——gitkraken">
-      <i class="fa fa-chevron-left"></i> git的便携工具——gitkraken
+    <a href="/2022/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/" rel="prev" title="操作系统引论">
+      <i class="fa fa-chevron-left"></i> 操作系统引论
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2022/02/23/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/" rel="next" title="操作系统引论">
-      操作系统引论 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -335,7 +310,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8F%8A%E5%85%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">1.1 数据库及其系统的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-1-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.0.1.</span> <span class="nav-text">1.1.1 数据库的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-2-%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.0.2.</span> <span class="nav-text">1.1.2 数据模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-3-%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">1.0.3.</span> <span class="nav-text">1.1.3 数据库系统的组成</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-%E6%95%B0%E6%8D%AE%E5%BA%93%E6%8A%80%E6%9C%AF%E7%9A%84%E5%8F%91%E5%B1%95"><span class="nav-number">2.</span> <span class="nav-text">1.2 数据库技术的发展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F"><span class="nav-number">3.</span> <span class="nav-text">1.3 数据库应用系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-%E5%85%B8%E5%9E%8B%E7%9A%84%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">1.4 典型的数据库管理系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-number">5.</span> <span class="nav-text">1.5 软件下载</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-%E5%85%B3%E7%B3%BB%E5%8F%8A%E5%85%B6%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">2.1 关系及其相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-1-%E5%85%B3%E7%B3%BB%E7%9A%84%E9%80%9A%E4%BF%97%E5%AE%9A%E4%B9%89"><span class="nav-number">1.0.1.</span> <span class="nav-text">2.1.1 关系的通俗定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-2-%E5%85%B3%E7%B3%BB%E7%9A%84%E6%95%B0%E5%AD%A6%E5%AE%9A%E4%B9%89"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.1.2 关系的数学定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-3-%E5%85%B3%E7%B3%BB%E9%94%AE%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.0.3.</span> <span class="nav-text">2.1.3 关系键的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-4-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%BC%8F%E8%A1%A8%E7%A4%BA"><span class="nav-number">1.0.4.</span> <span class="nav-text">2.1.4 关系模式表示</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%8E%9F%E7%90%86"><span class="nav-number">2.</span> <span class="nav-text">2.2 数据库原理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E7%BB%84%E6%88%90"><span class="nav-number">2.0.1.</span> <span class="nav-text">2.2.1 关系模型的组成</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B%E7%9A%84%E6%93%8D%E4%BD%9C"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.2.2 关系模型的操作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-%E6%95%B0%E6%8D%AE%E5%AE%8C%E6%95%B4%E6%80%A7%E7%BA%A6%E6%9D%9F"><span class="nav-number">2.0.3.</span> <span class="nav-text">2.2.3 数据完整性约束</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-PostgreSQL%E6%95%B0%E6%8D%AE%E5%BA%93%E5%85%B3%E7%B3%BB%E6%93%8D%E4%BD%9C%E5%AE%9E%E8%B7%B5"><span class="nav-number">3.</span> <span class="nav-text">2.3 PostgreSQL数据库关系操作实践</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
