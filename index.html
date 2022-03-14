@@ -157,6 +157,506 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/03/%E5%BA%94%E7%94%A8%E5%B1%82/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JAYZ">
+      <meta itemprop="description" content="遇到困难睡大觉">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="摸鱼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/03/%E5%BA%94%E7%94%A8%E5%B1%82/" class="post-title-link" itemprop="url">应用层</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-03-03 14:48:10" itemprop="dateCreated datePublished" datetime="2022-03-03T14:48:10+08:00">2022-03-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-10 11:39:21" itemprop="dateModified" datetime="2022-03-10T11:39:21+08:00">2022-03-10</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><h4 id="web常用术语"><a href="#web常用术语" class="headerlink" title="web常用术语"></a>web常用术语</h4><ul>
+<li><strong>网页</strong>由许多<strong>对象</strong>组成，对象即<strong>文件</strong>，包括HTML文件，JPEG图像，音频文件等，每个对象被一个<strong>URL</strong>寻址</li>
+</ul>
+<h4 id="HTTP连接"><a href="#HTTP连接" class="headerlink" title="HTTP连接"></a>HTTP连接</h4><ul>
+<li><p><strong>过程</strong>：</p>
+<ol>
+<li>客户<strong>初始化</strong>一个与HTTP服务器80端口的<strong>TCP连接</strong>（创建套接字）</li>
+<li>HTTP服务器在80端口监听到来自HTTP客户的TCP连接请求，接受，<strong>建立连接</strong>，通知客户</li>
+<li>HTTP客户发送一个<strong>HTTP请求信息包含URL</strong>到TCP连接套接字，要某个web对象</li>
+<li>HTTP服务器接收请求信息，产生一个<strong>响应消息包含被请求对象</strong>，并发送这个消息到自身TCP连接套接字</li>
+<li>最后<strong>关闭TCP连接</strong></li>
+</ol>
+</li>
+<li><p><strong>分类</strong>：</p>
+<ul>
+<li><p><strong>非持久</strong>HTTP连接：(HTTP/1.0)</p>
+<p>每个TCP连接<strong>只传送一个对象</strong>，下载多个对象要建立多个TCP连接</p>
+</li>
+<li><p><strong>持久</strong>HTTP连接：(HTTP/1.1)</p>
+<p>一个TCP连接上可<strong>传送多个对象</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="HTTP报文及方法"><a href="#HTTP报文及方法" class="headerlink" title="HTTP报文及方法"></a>HTTP报文及方法</h4><h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><ul>
+<li><strong>目的</strong>：web站点希望能识别用户</li>
+<li><strong>四个组件</strong>：<ul>
+<li>cookie头部行在HTTP请求信息中</li>
+<li>cookie头部行在HTTP响应信息中</li>
+<li>cookie文件保存在用户主机并被用户浏览器管理</li>
+<li>cookie也保存在web站点的后端数据库</li>
+</ul>
+</li>
+<li>在用户<strong>最初</strong>发出HTTP请求访问某站点时，该站点创建一个<strong>唯一的ID</strong>，并在后端数据库创建<strong>一个响应于该ID的表项</strong></li>
+</ul>
+<h4 id="web缓存（代理服务器）"><a href="#web缓存（代理服务器）" class="headerlink" title="web缓存（代理服务器）"></a>web缓存（代理服务器）</h4><ul>
+<li><p><strong>目的</strong>：在不访问服务器的前提下满足客户端的HTTP请求</p>
+</li>
+<li><p><strong>过程</strong>：</p>
+<ul>
+<li>用户设定浏览器<strong>通过缓存进行Web访问</strong></li>
+<li>浏览器向<strong>缓存</strong>/代理服务器发送所有的HTTP请求</li>
+<li>如果所<strong>请求对象在缓存中</strong>，缓存器返回对象；否则缓存器向起始服务器发出请求，接收对象后<strong>转发给客户机</strong></li>
+</ul>
+</li>
+<li><p><strong>条件GET方法</strong>：</p>
+<img src="/2022/03/03/%E5%BA%94%E7%94%A8%E5%B1%82/image-20220310113635008.png" alt="image-20220310113635008" style="zoom:50%;"></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%92%8C%E5%9B%A0%E7%89%B9%E7%BD%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JAYZ">
+      <meta itemprop="description" content="遇到困难睡大觉">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="摸鱼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/03/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%92%8C%E5%9B%A0%E7%89%B9%E7%BD%91/" class="post-title-link" itemprop="url">计算机网络和因特网</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-03 14:12:13 / 修改时间：14:47:27" itemprop="dateCreated datePublished" datetime="2022-03-03T14:12:13+08:00">2022-03-03</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <hr>
+<h3 id="网络交换方式"><a href="#网络交换方式" class="headerlink" title="网络交换方式"></a>网络交换方式</h3><h4 id="电路交换"><a href="#电路交换" class="headerlink" title="电路交换"></a>电路交换</h4><p>两台主机之间创建一条<strong>专用的端到端连接</strong>，占用每条链路的一条电路</p>
+<p>在一条链路上<strong>建立多条连接</strong>，每个连接占用<strong>链路带宽的1/n</strong></p>
+<ul>
+<li><strong>频分多路复用FDM</strong></li>
+<li><strong>时分多路复用TDM</strong></li>
+</ul>
+<h4 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h4><p><strong>报文message</strong>划分为数据块，封装成<strong>分组packet</strong></p>
+<p>每个分组使用<strong>链路全部带宽</strong></p>
+<p><strong>存储转发机制</strong> - 先接收整个分组，再从输出链路转发出去</p>
+<ul>
+<li><strong>数据报网络TCP/IP</strong><ul>
+<li>分组目的地址决定下一跳</li>
+<li>会话期间路由可以改变</li>
+</ul>
+</li>
+<li><strong>虚电路网络</strong> - 面向<strong>连接</strong><ul>
+<li>每个分组有1个标签，标签决定下一跳</li>
+<li>确定固定的路径，保持于整个会话期间</li>
+<li>路由器必须为每个连接维护状态信息</li>
+</ul>
+</li>
+</ul>
+<h3 id="分组交换网络中的延迟、丢失、吞吐量"><a href="#分组交换网络中的延迟、丢失、吞吐量" class="headerlink" title="分组交换网络中的延迟、丢失、吞吐量"></a>分组交换网络中的延迟、丢失、吞吐量</h3><h4 id="分组延迟"><a href="#分组延迟" class="headerlink" title="分组延迟"></a>分组延迟</h4><ul>
+<li><strong>节点处理时延</strong> - 微秒级，几乎忽略</li>
+<li><strong>排队时延</strong> - 等待被发送到输出链路，取决于路由器的拥塞程度</li>
+<li><strong>传输时延</strong> - R=链路带宽(bps)，L=分组长度(bits)，t=L/R，类比<strong>乘客排队上车</strong></li>
+<li><strong>传播时延</strong> - d=物理链路的长度，s=介质的信号传播速度，t=d/s，类比<strong>公交车出发到下一个目的地</strong></li>
+</ul>
+<p>通常计算<strong>端到端时延</strong>，一般是<strong>传输+传播</strong></p>
+<h4 id="分组丢失"><a href="#分组丢失" class="headerlink" title="分组丢失"></a>分组丢失</h4><p>输入链路或输出链路缓冲区队列已满，分组被丢弃</p>
+<h4 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h4><p>接收端接收到数据的比特速率(bps)</p>
+<p>min{Rs,Rc}</p>
+<h3 id="协议层及其服务模型"><a href="#协议层及其服务模型" class="headerlink" title="协议层及其服务模型"></a>协议层及其服务模型</h3><ul>
+<li>OSI模型和TCP/IP模型</li>
+<li>上到下<strong>封装</strong>，下到上<strong>解封</strong></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/01/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E8%AF%AD%E8%A8%80SQL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JAYZ">
+      <meta itemprop="description" content="遇到困难睡大觉">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="摸鱼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/03/01/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%93%8D%E4%BD%9C%E8%AF%AD%E8%A8%80SQL/" class="post-title-link" itemprop="url">数据库操作语言SQL</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-03-01 10:24:47" itemprop="dateCreated datePublished" datetime="2022-03-01T10:24:47+08:00">2022-03-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-08 20:40:51" itemprop="dateModified" datetime="2022-03-08T20:40:51+08:00">2022-03-08</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="SQL概述"><a href="#SQL概述" class="headerlink" title="SQL概述"></a>SQL概述</h2><h4 id="SQL发展"><a href="#SQL发展" class="headerlink" title="SQL发展"></a>SQL发展</h4><h4 id="SQL的特点"><a href="#SQL的特点" class="headerlink" title="SQL的特点"></a>SQL的特点</h4><ul>
+<li>一体化、使用方式灵活、非过程化、语言语法简单</li>
+</ul>
+<h4 id="SQL的类型"><a href="#SQL的类型" class="headerlink" title="SQL的类型"></a>SQL的类型</h4><ul>
+<li><strong>数据定义DDL</strong>（创建、修改、删除对象）</li>
+<li><strong>数据操纵DML</strong>（插入、删除、更新数据）</li>
+<li><strong>数据查询DQL</strong></li>
+<li><strong>数据控制DCL</strong>（访问权限）</li>
+<li><strong>事务处理TPL</strong>（数据库事务的编程处理）</li>
+<li><strong>游标控制CCL</strong></li>
+</ul>
+<h4 id="SQL的数据类型"><a href="#SQL的数据类型" class="headerlink" title="SQL的数据类型"></a>SQL的数据类型</h4><ul>
+<li><strong>字符串型</strong>varchar(n)、char(n)</li>
+<li><strong>整数型</strong>int、smallint</li>
+<li><strong>定点数型</strong>numeric(p,d)</li>
+<li><strong>浮点数型</strong>real、double(n,d)</li>
+<li><strong>逻辑型</strong>bit</li>
+<li><strong>日期型</strong>date</li>
+</ul>
+<h2 id="数据定义SQL语句（DDL）"><a href="#数据定义SQL语句（DDL）" class="headerlink" title="数据定义SQL语句（DDL）"></a>数据定义SQL语句（DDL）</h2><h4 id="数据库的定义"><a href="#数据库的定义" class="headerlink" title="数据库的定义"></a>数据库的定义</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>数据库创建</span><br><span class="line"><span class="keyword">CREATE</span> DATABASE <span class="operator">&lt;</span>数据库名<span class="operator">&gt;</span></span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>数据库修改</span><br><span class="line"><span class="keyword">ALTER</span> DATABASE <span class="operator">&lt;</span>数据库名<span class="operator">&gt;</span> <span class="operator">&lt;</span>修改内容<span class="operator">&gt;</span></span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>数据库删除</span><br><span class="line"><span class="keyword">DROP</span> DATABASE <span class="operator">&lt;</span>数据库名<span class="operator">&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="数据库表对象的定义"><a href="#数据库表对象的定义" class="headerlink" title="数据库表对象的定义"></a>数据库表对象的定义</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>数据库表对象的定义</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span>  <span class="operator">&lt;</span>表名<span class="operator">&gt;</span></span><br><span class="line"> （ <span class="operator">&lt;</span>代理键列名<span class="operator">&gt;</span>  <span class="operator">&lt;</span>Serial数据类型<span class="operator">&gt;</span>  <span class="keyword">NOT</span> <span class="keyword">NULL</span>，		<span class="operator">/</span><span class="operator">/</span>表约束定义代理键</span><br><span class="line"> 	<span class="operator">&lt;</span>列名<span class="number">1</span><span class="operator">&gt;</span>  <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span>  [列完整性约束]，</span><br><span class="line">	<span class="operator">&lt;</span>列名<span class="number">2</span><span class="operator">&gt;</span>  <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span>   [列完整性约束]，	</span><br><span class="line">    <span class="operator">&lt;</span>列名<span class="number">3</span><span class="operator">&gt;</span>  <span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span>  [列完整性约束]，</span><br><span class="line">    …</span><br><span class="line">    <span class="keyword">CONSTRAINT</span>  <span class="operator">&lt;</span>约束名<span class="operator">&gt;</span>  <span class="keyword">PRIMARY</span> Key(主键列<span class="operator">/</span>代理键列名)		<span class="operator">/</span><span class="operator">/</span>表约束定义复合键或代理键</span><br><span class="line">    <span class="keyword">CONSTRAINT</span>	CoursePlanID_FK	<span class="keyword">FOREIGN</span> Key(CoursePlanID)</span><br><span class="line">	<span class="keyword">REFERENCES</span>  Plan(CoursePlanID)</span><br><span class="line">    <span class="keyword">ON</span> <span class="keyword">DELETE</span> CASCADE,		<span class="operator">/</span><span class="operator">/</span>定义外键，<span class="keyword">REFERENCES</span>指代外键位置，<span class="keyword">ON</span> <span class="keyword">DELETE</span> CASCADE指代级联删除</span><br><span class="line">   )；</span><br><span class="line"></span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>数据库表对象的修改</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span><span class="keyword">ADD</span>修改方式，用于增加新列或列完整性约束</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">ADD</span> <span class="operator">&lt;</span>新列名称<span class="operator">&gt;</span><span class="operator">&lt;</span>数据类型<span class="operator">&gt;</span><span class="operator">|</span>[完整性约束];</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span><span class="keyword">DROP</span>修改方式，用于删除指定列或列的完整性约束条件</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span><span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">DROP</span>  <span class="keyword">COLUMN</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span>;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span><span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">DROP</span>  <span class="keyword">CONSTRAINT</span><span class="operator">&lt;</span>完整性约束名<span class="operator">&gt;</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>RENAME修改方式，用于修改表名称、列名称</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> RENAME <span class="keyword">TO</span> <span class="operator">&lt;</span>新表名<span class="operator">&gt;</span>;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> RENAME <span class="operator">&lt;</span>原列名<span class="operator">&gt;</span> <span class="keyword">TO</span> <span class="operator">&lt;</span>新列名<span class="operator">&gt;</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span><span class="keyword">ALTER</span>修改方式，用于修改列的数据类型</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span> <span class="keyword">ALTER</span>  <span class="keyword">COLUMN</span> <span class="operator">&lt;</span>列名<span class="operator">&gt;</span> TYPE<span class="operator">&lt;</span>新的数据类型<span class="operator">&gt;</span>;</span><br><span class="line"></span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>数据库表对象的删除</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="数据表索引对象的定义"><a href="#数据表索引对象的定义" class="headerlink" title="数据表索引对象的定义"></a>数据表索引对象的定义</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>索引对象创建</span><br><span class="line"><span class="keyword">CREATE</span> INDEX  <span class="operator">&lt;</span>索引名<span class="operator">&gt;</span>  <span class="keyword">ON</span> <span class="operator">&lt;</span>表名<span class="operator">&gt;</span>（列名）;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>索引对象修改</span><br><span class="line"><span class="keyword">ALTER</span>  INDEX  <span class="operator">&lt;</span>索引名<span class="operator">&gt;</span> RENAME <span class="keyword">TO</span> <span class="operator">&lt;</span>新索引名<span class="operator">&gt;</span>；</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>索引对象删除</span><br><span class="line"><span class="keyword">DROP</span>  INDEX  <span class="operator">&lt;</span>索引名<span class="operator">&gt;</span> ；</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据操作SQL语句（DML）"><a href="#数据操作SQL语句（DML）" class="headerlink" title="数据操作SQL语句（DML）"></a>数据操作SQL语句（DML）</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>数据插入</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Student <span class="keyword">VALUES</span>(<span class="string">&#x27;2017220101105&#x27;</span>,<span class="string">&#x27;柳因&#x27;</span>,<span class="string">&#x27;女&#x27;</span>,<span class="string">&#x27;1999-04-23&#x27;</span>,<span class="string">&#x27;软件工程&#x27;</span>, <span class="string">&#x27;liuyin@163.com&#x27;</span>);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>数据更新</span><br><span class="line"><span class="keyword">UPDATE</span>  Student</span><br><span class="line"><span class="keyword">SET</span>  Email<span class="operator">=</span><span class="string">&#x27;zhaodong@163.com&#x27;</span></span><br><span class="line"><span class="keyword">WHERE</span>   StudentName<span class="operator">=</span><span class="string">&#x27;赵东&#x27;</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>数据删除</span><br><span class="line"><span class="keyword">DELETE</span> </span><br><span class="line"><span class="keyword">FROM</span>  STUDENT</span><br><span class="line"><span class="keyword">WHERE</span>   StudentName<span class="operator">=</span><span class="string">&#x27;张亮&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据查询SQL语句（DQL）"><a href="#数据查询SQL语句（DQL）" class="headerlink" title="数据查询SQL语句（DQL）"></a>数据查询SQL语句（DQL）</h2><h4 id="简单读取"><a href="#简单读取" class="headerlink" title="简单读取"></a>简单读取</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>从单个表读取指定列</span><br><span class="line"><span class="keyword">SELECT</span>  <span class="operator">&lt;</span>目标列<span class="operator">&gt;</span>[，<span class="operator">&lt;</span>目标列<span class="operator">&gt;</span>…]</span><br><span class="line"><span class="keyword">FROM</span>  <span class="operator">&lt;</span>关系表<span class="operator">&gt;</span>；</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>从单个表读取指定行</span><br><span class="line"><span class="keyword">SELECT</span>  <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span>  <span class="operator">&lt;</span>关系表<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">WHERE</span>  <span class="operator">&lt;</span>条件表达式<span class="operator">&gt;</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>从单个表读取指定行和列</span><br><span class="line"><span class="keyword">SELECT</span>   <span class="operator">&lt;</span>目标列<span class="operator">&gt;</span>[，<span class="operator">&lt;</span>目标列<span class="operator">&gt;</span>…]</span><br><span class="line"><span class="keyword">FROM</span>  <span class="operator">&lt;</span>关系表<span class="operator">&gt;</span></span><br><span class="line"><span class="keyword">WHERE</span>  <span class="operator">&lt;</span>条件表达式<span class="operator">&gt;</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="WHERE子句条件"><a href="#WHERE子句条件" class="headerlink" title="WHERE子句条件"></a>WHERE子句条件</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span><span class="keyword">WHERE</span>子句条件</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>BETWEEN...AND限定范围</span><br><span class="line"><span class="keyword">SELECT</span>  <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span>  STUDENT</span><br><span class="line"><span class="keyword">WHERE</span> BirthDay <span class="keyword">BETWEEN</span> ‘<span class="number">2000</span><span class="number">-01</span><span class="number">-01</span>’ <span class="keyword">AND</span> ‘<span class="number">2000</span><span class="number">-12</span><span class="number">-30</span>’;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>通配符查询</span><br><span class="line"><span class="keyword">SELECT</span>  <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span>  STUDENT</span><br><span class="line"><span class="keyword">WHERE</span>  Email  <span class="keyword">LIKE</span>  ’<span class="operator">%</span><span class="variable">@163</span>.com’;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>逻辑运算符<span class="keyword">AND</span>、<span class="keyword">OR</span>、<span class="keyword">NOT</span>以及<span class="keyword">IN</span>、<span class="keyword">NOT</span> <span class="keyword">IN</span>、<span class="keyword">IS</span> <span class="keyword">NULL</span>、<span class="keyword">IS</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line"><span class="keyword">SELECT</span>  StudentID, StudentName, StudentGender, Major</span><br><span class="line"><span class="keyword">FROM</span>  STUDENT</span><br><span class="line"><span class="keyword">WHERE</span>  Major<span class="operator">=</span>’软件工程’  <span class="keyword">AND</span>  StudentGender<span class="operator">=</span>’男’;</span><br></pre></td></tr></table></figure>
+
+<h4 id="查询结果排序"><a href="#查询结果排序" class="headerlink" title="查询结果排序"></a>查询结果排序</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>查询结果排序</span><br><span class="line"><span class="keyword">SELECT</span>  <span class="operator">*</span></span><br><span class="line"><span class="keyword">FROM</span>  STUDENT</span><br><span class="line"><span class="keyword">ORDER</span>  <span class="keyword">BY</span>  Birthday <span class="keyword">DESC</span> ,  StudentName  <span class="keyword">ASC</span>;</span><br></pre></td></tr></table></figure>
+
+<h4 id="内置函数"><a href="#内置函数" class="headerlink" title="内置函数"></a>内置函数</h4><ul>
+<li><p>聚合函数：</p>
+<table>
+<thead>
+<tr>
+<th>聚合函数</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>AVG（）</td>
+<td>计算结果集指定列数据的平均值</td>
+</tr>
+<tr>
+<td>COUNT（）</td>
+<td>计算结果集行数</td>
+</tr>
+<tr>
+<td>MIN（）</td>
+<td>找出结果集指定列数据的最小值</td>
+</tr>
+<tr>
+<td>MAX（）</td>
+<td>找出结果集指定列数据的最大值</td>
+</tr>
+<tr>
+<td>SUM（）</td>
+<td>计算结果集指定列数据的总和</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h4 id="查询结果分组处理"><a href="#查询结果分组处理" class="headerlink" title="查询结果分组处理"></a>查询结果分组处理</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>  Major  <span class="keyword">AS</span> 专业,  COUNT（StudentID） <span class="keyword">AS</span> 学生人数</span><br><span class="line"><span class="keyword">FROM</span>  Student</span><br><span class="line"><span class="keyword">WHERE</span>  StudentGender<span class="operator">=</span>’男’</span><br><span class="line"><span class="keyword">GROUP</span>  <span class="keyword">BY</span>  Major	<span class="operator">/</span><span class="operator">/</span>分组</span><br><span class="line"><span class="keyword">HAVING</span>  <span class="built_in">COUNT</span>(<span class="operator">*</span>)<span class="operator">&gt;</span><span class="number">2</span>;	<span class="operator">/</span><span class="operator">/</span>条件</span><br></pre></td></tr></table></figure>
+
+<h4 id="多表关联查询"><a href="#多表关联查询" class="headerlink" title="多表关联查询"></a>多表关联查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>子查询</span><br><span class="line"><span class="keyword">SELECT</span>  TeacherID,  TeacherName,  TeacherTitle</span><br><span class="line"><span class="keyword">FROM</span>  Teacher</span><br><span class="line"><span class="keyword">WHERE</span>  CollegeID  <span class="keyword">IN</span></span><br><span class="line">        (<span class="keyword">SELECT</span>  CollegeID  </span><br><span class="line">     <span class="keyword">FROM</span>  College</span><br><span class="line">     <span class="keyword">WHERE</span>  CollegeName<span class="operator">=</span>’计算机学院’);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>连接查询多表</span><br><span class="line"><span class="keyword">SELECT</span>  B.CollegeName <span class="keyword">AS</span> 学院名称,  A.TeacherID  <span class="keyword">AS</span> 编号, A.TeacherName  <span class="keyword">AS</span> 姓名,  A.TeacherGender  <span class="keyword">AS</span> 性别,  A. TeacherTitle  <span class="keyword">AS</span> 职称</span><br><span class="line"><span class="keyword">FROM</span>  Teacher  <span class="keyword">AS</span>  A，College  <span class="keyword">AS</span>  B</span><br><span class="line"><span class="keyword">WHERE</span>  A.CollegeID<span class="operator">=</span>B.CollegeID </span><br><span class="line"><span class="keyword">ORDER</span>  <span class="keyword">BY</span>  B.CollegeName, A.TeacherID;</span><br></pre></td></tr></table></figure>
+
+<h4 id="JOIN…ON连接"><a href="#JOIN…ON连接" class="headerlink" title="JOIN…ON连接"></a>JOIN…ON连接</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>内连接</span><br><span class="line"><span class="keyword">SELECT</span>  B.CollegeName <span class="keyword">AS</span> 学院名称,  A.TeacherID  <span class="keyword">AS</span> 编号, A.TeacherName  <span class="keyword">AS</span> 姓名,  A.TeacherGender  <span class="keyword">AS</span> 性别,  A. TeacherTitle  <span class="keyword">AS</span> 职称</span><br><span class="line"><span class="keyword">FROM</span>  TEACHER  <span class="keyword">AS</span>  A  <span class="keyword">JOIN</span>  COLLEGE  <span class="keyword">AS</span>  B</span><br><span class="line"><span class="keyword">ON</span>  A.CollegeID<span class="operator">=</span>B.CollegeID </span><br><span class="line"><span class="keyword">ORDER</span>  <span class="keyword">BY</span>  B.CollegeName, A.TeacherID;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>外连接</span><br><span class="line"><span class="keyword">SELECT</span> C.CourseName <span class="keyword">AS</span> 课程名称, T.TeacherName <span class="keyword">AS</span> 教师, </span><br><span class="line"><span class="built_in">COUNT</span>  (R.CoursePlanID)  <span class="keyword">AS</span> 选课人数</span><br><span class="line"><span class="keyword">FROM</span>  COURSE  <span class="keyword">AS</span>  C  <span class="keyword">JOIN</span>  PLAN  <span class="keyword">AS</span>  P  </span><br><span class="line"><span class="keyword">ON</span>  C.CourseID<span class="operator">=</span>P.CourseID </span><br><span class="line"><span class="keyword">JOIN</span>  TEACHER  <span class="keyword">AS</span>  T  <span class="keyword">ON</span>  P.TeacherID<span class="operator">=</span>T.TeacherID</span><br><span class="line"><span class="keyword">LEFT</span>  <span class="keyword">JOIN</span>  REGISTER  <span class="keyword">AS</span>  R  <span class="keyword">ON</span>  P.CoursePlanID<span class="operator">=</span>R.CoursePlanID</span><br><span class="line"><span class="keyword">GROUP</span>  <span class="keyword">BY</span> C.CourseName, T.TeacherName;</span><br></pre></td></tr></table></figure>
+
+<h2 id="数据控制SQL语句（DCL）"><a href="#数据控制SQL语句（DCL）" class="headerlink" title="数据控制SQL语句（DCL）"></a>数据控制SQL语句（DCL）</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>权限授予</span><br><span class="line"><span class="keyword">GRANT</span>  <span class="keyword">SELECT</span>, <span class="keyword">INSERT</span>, <span class="keyword">UPDATE</span>, <span class="keyword">DELETE</span>  <span class="keyword">ON</span>  REGISTER  <span class="keyword">TO</span>  RoleS;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>权限收回</span><br><span class="line"><span class="keyword">REVOKE</span>  <span class="keyword">DELETE</span>  <span class="keyword">ON</span>  REGISTER  <span class="keyword">FROM</span>  RoleS;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>权限拒绝</span><br><span class="line">DENY  <span class="keyword">DELETE</span>  <span class="keyword">ON</span>  TEACHER  <span class="keyword">TO</span>  RoleT;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>区别在于<span class="keyword">REVOKE</span>后还可以从更高权限进行访问</span><br></pre></td></tr></table></figure>
+
+<h2 id="视图SQL语句"><a href="#视图SQL语句" class="headerlink" title="视图SQL语句"></a>视图SQL语句</h2>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/28/%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0%E4%B8%8E%E6%8E%A7%E5%88%B6/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="JAYZ">
+      <meta itemprop="description" content="遇到困难睡大觉">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="摸鱼">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2022/02/28/%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0%E4%B8%8E%E6%8E%A7%E5%88%B6/" class="post-title-link" itemprop="url">进程的描述与控制</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2022-02-28 17:42:34" itemprop="dateCreated datePublished" datetime="2022-02-28T17:42:34+08:00">2022-02-28</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2022-03-01 21:58:04" itemprop="dateModified" datetime="2022-03-01T21:58:04+08:00">2022-03-01</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前趋图和程序执行"><a href="#前趋图和程序执行" class="headerlink" title="前趋图和程序执行"></a>前趋图和程序执行</h2><h4 id="前趋图"><a href="#前趋图" class="headerlink" title="前趋图"></a>前趋图</h4><ul>
+<li>有向无循环</li>
+</ul>
+<h4 id="程序顺序执行"><a href="#程序顺序执行" class="headerlink" title="程序顺序执行"></a>程序顺序执行</h4><ul>
+<li>特征：<ul>
+<li><strong>顺序性</strong></li>
+<li><strong>封闭性</strong></li>
+<li><strong>可再现性</strong></li>
+</ul>
+</li>
+</ul>
+<h4 id="程序并发执行"><a href="#程序并发执行" class="headerlink" title="程序并发执行"></a>程序并发执行</h4><ul>
+<li>特征：<ul>
+<li><strong>间断性</strong>：具有“执行-暂停-执行”的活动规律</li>
+<li><strong>失去封闭性</strong>：多个程序共享系统资源</li>
+<li><strong>不可再现性</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="进程的描述"><a href="#进程的描述" class="headerlink" title="进程的描述"></a>进程的描述</h2><h4 id="进程的定义和特征"><a href="#进程的定义和特征" class="headerlink" title="进程的定义和特征"></a>进程的定义和特征</h4><ul>
+<li><strong>进程</strong>是<strong>进程实体</strong>（PCB、程序段、相关数据段）的运行过程</li>
+<li>特征：<ul>
+<li><strong>动态性</strong>：由创建而产生，由调度而执行，由撤销而消亡</li>
+<li><strong>并发性</strong>：多个进程实体同存于内存，且能同时执行</li>
+<li><strong>独立性</strong>：进程实体是独立运行、独立分配资源、独立接受调度的基本单位</li>
+<li><strong>异步性</strong>：进程按各自独立、不可预知的速度前进</li>
+</ul>
+</li>
+</ul>
+<h4 id="进程的基本状态及转换"><a href="#进程的基本状态及转换" class="headerlink" title="进程的基本状态及转换"></a>进程的基本状态及转换</h4><ul>
+<li><p>三种状态：</p>
+<ul>
+<li><strong>就绪状态</strong>：已分配到除CPU以外的所有必要资源</li>
+<li><strong>执行状态</strong>：已获得CPU，正在执行</li>
+<li><strong>阻塞状态</strong></li>
+</ul>
+</li>
+<li><p><strong>创建状态</strong>：申请空白PCB，填入控制管理信息，分配运行时所必须的资源</p>
+<p><strong>终止状态</strong>：PCB清零并返还系统</p>
+</li>
+<li><p><strong>挂起状态</strong>：执行的进程暂停执行</p>
+</li>
+<li><img src="/2022/02/28/%E8%BF%9B%E7%A8%8B%E7%9A%84%E6%8F%8F%E8%BF%B0%E4%B8%8E%E6%8E%A7%E5%88%B6/image-20220228181549999.png" alt="image-20220228181549999" style="zoom: 50%;"></li>
+</ul>
+<h4 id="进程管理中的数据结构"><a href="#进程管理中的数据结构" class="headerlink" title="进程管理中的数据结构"></a>进程管理中的数据结构</h4><ul>
+<li>进程控制块PCB<strong>作用</strong>（之一）：实现间断性的运行方式（<strong>保护CPU现场</strong>）</li>
+<li>进程控制块<strong>内容</strong>：进程标识符、处理机状态、进程调度信息、进程调度信息、进程控制信息</li>
+<li>进程控制块的<strong>组织方式</strong>：多级链接</li>
+</ul>
+<h2 id="进程控制"><a href="#进程控制" class="headerlink" title="进程控制"></a>进程控制</h2><h4 id="操作系统内核"><a href="#操作系统内核" class="headerlink" title="操作系统内核"></a>操作系统内核</h4><p>进程控制一般是由OS内核中的一组<strong>原语</strong>实现的</p>
+<h4 id="进程的创建"><a href="#进程的创建" class="headerlink" title="进程的创建"></a>进程的创建</h4><ul>
+<li><strong>进程图</strong></li>
+<li>引起创建进程的<strong>事件</strong>：用户登录、作业调度、提供服务、应用请求</li>
+<li>进程的<strong>创建</strong>：<ol>
+<li>申请空白的PCB</li>
+<li>为新进程分配资源</li>
+<li>初始化进程控制块各种信息</li>
+<li>将新进程插入就绪队列</li>
+</ol>
+</li>
+</ul>
+<h4 id="进程的终止"><a href="#进程的终止" class="headerlink" title="进程的终止"></a>进程的终止</h4><ul>
+<li>引起进程终止的<strong>事件</strong>：正常结束、异常结束、外界干预</li>
+<li>进程的终止<strong>过程</strong>：<ol>
+<li>根据标识符检索出PCB，读取进程状态</li>
+<li>若该进程处于执行状态，立即终止执行，<strong>重新进行调度</strong></li>
+<li>若有子孙进程，<strong>将其所有子孙进程终止</strong></li>
+<li>将其全部资源<strong>归还给其父进程或系统</strong></li>
+<li>将PCB从所在队列中移除</li>
+</ol>
+</li>
+</ul>
+<h4 id="进程的阻塞与唤醒"><a href="#进程的阻塞与唤醒" class="headerlink" title="进程的阻塞与唤醒"></a>进程的阻塞与唤醒</h4><ul>
+<li>进程<strong>阻塞</strong>过程：<ol>
+<li>进程调用阻塞原语block将自己阻塞</li>
+<li>将现行状态由执行改为阻塞，并将PCB插入阻塞队列</li>
+<li>转调度程序进行重新调度</li>
+</ol>
+</li>
+<li>进程<strong>唤醒</strong>过程：<ol>
+<li>有关进程调用唤醒原语wakeup()</li>
+<li>将进程从阻塞队列中移出，将现行状态改为就绪，然后重新插入到就绪队列</li>
+</ol>
+</li>
+</ul>
+<h4 id="进程的挂起与激活"><a href="#进程的挂起与激活" class="headerlink" title="进程的挂起与激活"></a>进程的挂起与激活</h4><h2 id="进程同步"><a href="#进程同步" class="headerlink" title="进程同步"></a>进程同步</h2><h4 id="进程同步的基本概念"><a href="#进程同步的基本概念" class="headerlink" title="进程同步的基本概念"></a>进程同步的基本概念</h4><ul>
+<li><p>进程同步机制：使并发执行的诸进程按一定规则共享系统资源</p>
+</li>
+<li><p>某些资源必须互斥使用，这类资源称为<strong>临界资源</strong>，访问临界资源的代码称为<strong>临界区</strong></p>
+<p>任何时刻，只允许一个进程进入临界区，以实现进程对临界资源的<strong>互斥访问</strong></p>
+</li>
+</ul>
+<h4 id="信号量机制"><a href="#信号量机制" class="headerlink" title="信号量机制"></a>信号量机制</h4>
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2022/02/24/%E6%95%B0%E6%8D%AE%E5%BA%93%E5%85%B3%E7%B3%BB%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -723,14 +1223,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">6</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-count">5</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
